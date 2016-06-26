@@ -3,7 +3,9 @@
 XML2Code is a project that defines an XML syntax that is meant to be as data sink for different programming languages.
 The starting point is UML and XML as the language for representation of programming code.
 
-XML-Parser can read the XML-Code and cross compile to an programming language of choice. Programming in
+XML-Parser can read the XML-Code and cross compile to an programming language of choice. 
+
+It is not meant to develop software or libraries, classes or packages in XML syntax. XML2Code is an iterims format from one programming language into another programming language or as a contibution to [executable XML](https://en.wikipedia.org/wiki/Executable_UML).
 
 ## Package 
 A package is wrapped in PACKAGE-Tag
