@@ -18,29 +18,30 @@ The following code shows an IF-Statement without ELSE-Block
 ```
 <IF>
    <CONDITION>
-     ....
+    
    </CONDITION>
    <THEN>
-     ....
+    
    </THEN>
 </IF>
 ```
 The following code shows an IF-Statement with ELSE-Block
+```
 <IF>
    <CONDITION>
-     ....
+    
    </CONDITION>
    <THEN>
-     ....
+    
    </THEN>
    <ELSE>
-     ....
+    
    </ELSE>
 </IF>
-
 ```
+
 ### FOR-Statement
-Init a variable with i=0, i<max, i=i+1
+Init a variable with i=0, i&lt;max, i=i+1
 ```
 <FOR>
    <DEFVARIABLE name="i" class="Integer">0</FORVARIABLE>
@@ -62,13 +63,13 @@ Init a variable with i=0, i<max, i=i+1
       </SETVARIABLE>
    </ITERATION>
    <DO>
-     ....
-   </DO>
+    .....
+    </DO>
 </FOR>
 ```
 
 ### WHILE-Statement
-Init a variable with i=0 before the while statement and perform the iteration until  i<max, increment for all loops with i=i+1.
+Init a variable with i=0 before the while statement and perform the iteration until  i&lt;max, increment for all loops with i=i+1.
 
 ```
 <DEFVARIABLE name="i" class="Integer">0</FORVARIABLE>
@@ -84,8 +85,7 @@ Init a variable with i=0 before the while statement and perform the iteration un
      </LESS>
    </CONDITION>
    <DO>
-     ....
-
+     .....
       <SETVARIABLE name="i">
         <VARIABLE name="i" />
         <OPERATOR value="+" />
@@ -94,3 +94,4 @@ Init a variable with i=0 before the while statement and perform the iteration un
    </DO>
 </WHILE>
 ```
+
