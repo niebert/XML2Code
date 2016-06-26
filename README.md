@@ -10,7 +10,7 @@ It is not meant to develop software or libraries, classes or packages in XML syn
 ## Package 
 A package is wrapped in PACKAGE-Tag
 ```
-<PACKAGE name="mypackage">
+<PACKAGE name="MyPackage">
 
 </PACKAGE>
 ```
