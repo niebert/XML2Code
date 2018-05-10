@@ -1,0 +1,31 @@
+{
+  "name": "xml2code",
+  "version": "0.0.1",
+  "description": "Create XML Abstract Syntax Tree from Javascript Source Code",
+  "main": "src/main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jshint dist/xml2code.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niebert/XML2Code.git"
+  },
+  "keywords": [
+    "XML",
+    "Javascript",
+    "cross-compiler",
+    "Abstract",
+    "Syntax",
+    "Tree",
+    "AST"
+  ],
+  "author": "Engelbert Niehaus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niebert/XML2Code/issues"
+  },
+  "homepage": "https://github.com/niebert/XML2Code#readme"
+}
