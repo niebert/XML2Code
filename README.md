@@ -5,9 +5,18 @@ The starting point is UML and XML as the language for representation of programm
 
 XML-Parser can read the XML-Code and cross compile to an programming language of choice. Even a browser with a integrated XML-parser could be used to cross compile XML2Code Sources into another programming language.
 
-It is not meant to develop software or libraries, classes or packages in XML syntax. XML2Code is an iterims format from one programming language into another programming language or as a contribution to [executable XML](https://en.wikipedia.org/wiki/Executable_UML).
+## XML2Code is Not a XML Programming Language!
+* `XML2Code` is not meant to be language to develop software or libraries, classes, packages, ... in `XML` syntax.
+* `XML2Code` is an iterims format from one programming language into another programming language or as a contribution to [executable XML](https://en.wikipedia.org/wiki/Executable_UML).
+* `XML2Code` can be used to represent an Abstract Syntax Tree for cross-compilation from one programming language intp another (e.g. cross-compile a valuable library in `PHP` into `JavaScript`, to have these libraries available in a new software project for which these functions are currently missing).
 
-## Package 
+## XML2Code and JSON
+[UglifyJS](https://github.com/mishoo/UglifyJS2) can be used to create an Abstract Syntax Tree (AST) from Javascript source code (see [UglifyJS Parser](http://lisperator.net/uglifyjs/parser)). The provided AST from UglifyJS can be used to create an XML representation.
+
+## WebApps and Software
+The underlying data structure for code generation is an Abstract Syntax Tree (AST) for the code. Starting from the programming language `Javascript` the well-know library [UglifyJS]()
+
+## Package
 A package is wrapped in PACKAGE-Tag
 ```
 <PACKAGE name="MyPackage">
@@ -15,7 +24,7 @@ A package is wrapped in PACKAGE-Tag
 </PACKAGE>
 ```
 
-## Class 
+## Class
 A Class is wrapped in CLASS-Tag
 ```
 <CLASS name="MyClass">
@@ -76,9 +85,13 @@ Set attribute is represented in programming languages with "self" or "this".
    </DEFMETHOD>
 </CLASS>
 ```
-## Create an Object 
-The following XML-Statement creates an instance of certain class "MyClass".
-E.g. <tt>var vMyVar = new MyClass();</tt> 
+## Create an Object
+The following XML-Statement creates an instance of certain class `MyClass`.
+E.g.
+```javascript
+var vMyVar = new MyClass();
+```
+
 ```
 <SETVARIABLE name="vMyVar">
    <NEW name="MyClass">
@@ -93,10 +106,10 @@ The following code shows an IF-Statement without ELSE-Block
 ```
 <IF>
    <CONDITION>
-    
+
    </CONDITION>
    <THEN>
-    
+
    </THEN>
 </IF>
 ```
@@ -119,7 +132,9 @@ The following code shows an IF-Statement with ELSE-Block
 Init a variable with i=0, i&lt;max, i=i+1
 ```
 <FOR>
-   <DEFVARIABLE name="i" class="Integer">0</FORVARIABLE>
+   <DEFVARIABLE name="i" class="Integer">
+      <CONSTANT class="Integer" value="0" />
+   </DEFVARIABLE>
    <CONDITION>
      <LESS>
        <BLOCK>
@@ -134,7 +149,7 @@ Init a variable with i=0, i&lt;max, i=i+1
       <SETVARIABLE name="i">
         <VARIABLE name="i" />
         <OPERATOR value="+" />
-        1
+        <CONSTANT class="Integer" value="1" />
       </SETVARIABLE>
    </ITERATION>
    <DO>
@@ -169,4 +184,3 @@ Init a variable with i=0 before the while statement and perform the iteration un
    </DO>
 </WHILE>
 ```
-
