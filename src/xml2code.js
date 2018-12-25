@@ -34,5 +34,6 @@ function save_json(pFilename, pJSON) {
 var XML2Code = {
   "get_prototype_methods": get_prototype_methods,
   "save_file": save_file,
-  "save_json": save_json
+  "save_json": save_json,
+  "codegen": codegen
 };

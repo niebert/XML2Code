@@ -1,11 +1,11 @@
 /* ---------------------------------------
  Exported Module Variable: XML2Code
  Package:  xml2code
- Version:  0.0.1  Date: 2018/12/25 9:04:44
+ Version:  0.0.1  Date: 2018/12/25 9:56:04
  Homepage: https://github.com/niebert/XML2Code#readme
  Author:   Engelbert Niehaus
  License:  MIT
- Date:     2018/12/25 9:04:44
+ Date:     2018/12/25 9:56:04
  Require Module with:
     const XML2Code = require('xml2code');
  JSHint: installation with 'npm install jshint -g'
@@ -175,7 +175,8 @@ function save_json(pFilename, pJSON) {
 var XML2Code = {
   "get_prototype_methods": get_prototype_methods,
   "save_file": save_file,
-  "save_json": save_json
+  "save_json": save_json,
+  "codegen": codegen
 };
 
 

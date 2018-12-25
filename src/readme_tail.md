@@ -1,10 +1,10 @@
 ## NPM Library Information
 * Exported Module Variable: `XML2Code`
 * Package:  `xml2code`
-* Version:  `0.0.1`   (last build 2018/12/25 9:04:44)
+* Version:  `0.0.1`   (last build 2018/12/25 9:56:04)
 * Homepage: `https://github.com/niebert/XML2Code#readme`
 * License:  MIT
-* Date:     2018/12/25 9:04:44
+* Date:     2018/12/25 9:56:04
 * Require Module with:
 ```javascript
     const vXML2Code = require('xml2code');
