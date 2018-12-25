@@ -246,7 +246,7 @@ function create_header(pkg) {
   };
   vHeader += "\n Require Module with:";
   vHeader += "\n    const "+pkg.exportvar+" = require('" + pkg.name+ "');";
-  vHeader += "\n    var  compileCode = "+pkg.exportvar+".compile(vTemplate);";
+  //vHeader += "\n    var  compileCode = "+pkg.exportvar+".compile(vTemplate);";
   vHeader += "\n JSHint: installation with 'npm install jshint -g'";
   vHeader += "\n ------------------------------------------ */";
   vHeader += "\n";

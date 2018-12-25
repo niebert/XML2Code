@@ -867,10 +867,10 @@ These libraries are not included in `xml2code.js`, but e.g. are required in `bui
 ## NPM Library Information
 * Exported Module Variable: `XML2Code`
 * Package:  `xml2code`
-* Version:  `0.0.1`   (last build 2018/12/25 8:36:14)
+* Version:  `0.0.1`   (last build 2018/12/25 9:04:44)
 * Homepage: `https://github.com/niebert/XML2Code#readme`
 * License:  MIT
-* Date:     2018/12/25 8:36:14
+* Date:     2018/12/25 9:04:44
 * Require Module with:
 ```javascript
     const vXML2Code = require('xml2code');

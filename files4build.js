@@ -6,12 +6,13 @@ const getLibs4Build = function (pLibPath) {
   var vLibs4Build = [
     './src/npm_header.js',
     pLibPath+'require_mods.js',
+    pLibPath+'method2jscc.js',
     //pLibPath+'arrayhash.js',
     //pLibPath+'handlebars.js',
     //pLibPath+'handlebars_helpers.js',
     //'./src/npm_inherit.js',
     //pLibPath+'exportmod.js',
-    './src/js2code.js'
+    './src/xml2code.js'
   ];
   return vLibs4Build;
 }
