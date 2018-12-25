@@ -1,5 +1,6 @@
 {
   "name": "xml2code",
+  "exportvar": "XML2Code",
   "version": "0.0.1",
   "description": "Create XML Abstract Syntax Tree from Javascript Source Code",
   "main": "src/main.js",
@@ -7,8 +8,12 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "jshint dist/xml2code.js"
-  },
+    "watch": "watchify src/xml2code.js -o dist/xml2code.watch.js -v",
+    "build": "node ./build.js;doctoc ./README.md",
+    "test": "jshint src/xml2code.js",
+    "compress": "uglifyjs dist/xml2code.js --compress -o dist/xml2code.min.js",
+    "browserify": "browserify src/xml2code.js  | uglifyjs -mc warnings=false > docs/js/xml2code.src.min.js"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/niebert/XML2Code.git"
@@ -17,7 +22,7 @@
     "XML",
     "Javascript",
     "cross-compiler",
-    "Abstract",
+    "Abstract Syntax Tree",
     "Syntax",
     "Tree",
     "AST"
@@ -27,5 +32,21 @@
   "bugs": {
     "url": "https://github.com/niebert/XML2Code/issues"
   },
-  "homepage": "https://github.com/niebert/XML2Code#readme"
+  "build": {
+    "readme": "./README.md",
+    "html": "./docs/index.html",
+    "htmlsrc": "docs/index_src_libs.html",
+    "css": "./docs/css/main.css"
+  },
+  "homepage": "https://github.com/niebert/XML2Code#readme",
+  "dependencies": {
+    "uglify-js": "^2.6.2"
+  },
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "concat-files": "^0.1.1",
+    "doctoc": "^1.3.0",
+    "watchify": "^3.9.0",
+    "jsdom": "^13.1.0"
+  }
 }

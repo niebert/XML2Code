@@ -1,20 +1,7 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+<!-- BEGIN: src/readme/usage.md -->
 
-- [XML2Code](#xml2code)
-  - [XML2Code is Not a XML Programming Language!](#xml2code-is-not-a-xml-programming-language)
-  - [XML2Code and JSON](#xml2code-and-json)
-  - [WebApps and Software](#webapps-and-software)
-  - [Package](#package)
-  - [Class](#class)
-  - [Create an Object](#create-an-object)
-  - [Control Statements](#control-statements)
-    - [IF-Statement](#if-statement)
-    - [FOR-Statement](#for-statement)
-    - [WHILE-Statement](#while-statement)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+## Quick Start for Library-Users
+Just copy the `docs/`-folder and adapt the JSON-schema `docs/schema` and the JSON data in the folder `docs/db/` to the schema for your requirements. If you want to create your own JSON schema use the [JSON2Schema tool](https://niebert/github.io/JSON2Schema).
 
 # XML2Code
 
@@ -24,7 +11,7 @@ The starting point is UML and XML as the language for representation of programm
 XML-Parser can read the XML-Code and cross compile to an programming language of choice. Even a browser with a integrated XML-parser could be used to cross compile XML2Code Sources into another programming language.
 
 ## XML2Code is Not a XML Programming Language!
-* `XML2Code` is not meant to be language to develop software or libraries, classes, packages, ... in `XML` syntax.
+* `XML2Code` is not meant to be a language to develop software or libraries, classes, packages, ... in `XML` syntax.
 * `XML2Code` is an iterims format from one programming language into another programming language or as a contribution to [executable XML](https://en.wikipedia.org/wiki/Executable_UML).
 * `XML2Code` can be used to represent an Abstract Syntax Tree for cross-compilation from one programming language intp another (e.g. cross-compile a valuable library in `PHP` into `JavaScript`, to have these libraries available in a new software project for which these functions are currently missing).
 
@@ -202,3 +189,5 @@ Init a variable with i=0 before the while statement and perform the iteration un
    </DO>
 </WHILE>
 ```
+
+<!-- END:   src/readme/usage.md -->
