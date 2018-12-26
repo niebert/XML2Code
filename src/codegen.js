@@ -231,6 +231,7 @@ function getDateTime() {
 	return vOut;
 };
 
+
 function create_header(pkg) {
   var vFileName = "npm_header.js";
   var vHeader = "/* ---------------------------------------";
@@ -243,9 +244,12 @@ function create_header(pkg) {
 	vHeader += "\n Date:     "+getDateTime();
   if (pkg.hasOwnProperty("inherit")) {
     vHeader += "\n Inheritance: '"+pkg.exportvar+"' inherits from '"+pkg.inherit+"'";
-  };
+  }
   vHeader += "\n Require Module with:";
   vHeader += "\n    const "+pkg.exportvar+" = require('" + pkg.name+ "');";
+	if (pkg.is_constructor && pkg.is_constructor == true ) {
+		vHeader += "\n    var v" + pkg.name+ " = new "+pkg.exportvar+"();";
+	}
   //vHeader += "\n    var  compileCode = "+pkg.exportvar+".compile(vTemplate);";
   vHeader += "\n JSHint: installation with 'npm install jshint -g'";
   vHeader += "\n ------------------------------------------ */";
@@ -338,10 +342,17 @@ function create_html_description(pkg) {
 
 function create_html_tail(pkg) {
 	var vFileName = "html_tail.html";
+	var vRepo = pkg.repository.url;
+	var vBegin = vRepo.indexOf("https:");
+	var vEnd = vRepo.lastIndexOf(".git");
+	var vURL = "https://www.github.com/" + pkg.githubuser + "/" + pkg.exportvar;
+	if ((vBegin >= 0) && (vEnd > vBegin)) {
+		vURL = vRepo.substring(vBegin,vEnd);
+	};
   var vOut = `
 	   <!-- BEGIN: src/`+vFileName+` -->
 	   <center style="font-size: 10px;">
-			  <a href="https://www.github.com/`+pkg.githubuser+`/`+pkg.exportvar+`" target="_blank"> GitHub Sources `+pkg.exportvar+`</a> - <a href="https://github.com/`+pkg.githubuser+`/`+pkg.exportvar+`/archive/master.zip"  target="_blank">Download `+pkg.exportvar+` ZIP</a>
+			  <a href="`+vURL+`" target="_blank"> GitHub Sources `+pkg.exportvar+`</a> - <a href="`+ vURL +`/archive/master.zip"  target="_blank">Download `+pkg.exportvar+` ZIP</a>
 			  <br>
 			  Version: `+pkg.version+` Date: `+getDateTime()+` Author: `+pkg.author+`
 	   </center>

@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Libraries required for  `XML2Code`](#libraries-required-for--xml2code)
+- [Libraries for Building and Developement](#libraries-for-building-and-developement)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## Libraries required for  `XML2Code`
 The following libraries are necessary for `xml2code.js`:

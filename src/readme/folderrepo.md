@@ -1,3 +1,4 @@
+
 <!-- BEGIN: src/readme/folderrepo.md -->
 ## Folder and Files in Repository
 In the repository `___PKG_EXPORTVAR___` several files are generated automatically during the build process. `files4build.js` defines the list of files parts that are required and used to the build process with `npm run build`.

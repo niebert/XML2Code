@@ -11,6 +11,75 @@ The following table of contents is generated with `node doctoc README.md`.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
+  - [Installation `XML2Code`](#installation-xml2code)
+  - [Quick Start for Library-Users](#quick-start-for-library-users)
+- [XML2Code](#xml2code)
+  - [XML2Code is Not a XML Programming Language!](#xml2code-is-not-a-xml-programming-language)
+  - [XML2Code and JSON](#xml2code-and-json)
+  - [WebApps and Software](#webapps-and-software)
+  - [Package](#package)
+  - [Class](#class)
+  - [Create an Object](#create-an-object)
+  - [Control Statements](#control-statements)
+    - [IF-Statement](#if-statement)
+    - [FOR-Statement](#for-statement)
+    - [WHILE-Statement](#while-statement)
+  - [Templates for Handlebars4Code](#templates-for-handlebars4code)
+  - [vDataJSON as Template Storage](#vdatajson-as-template-storage)
+  - [Templates and JSON into vDataJSON](#templates-and-json-into-vdatajson)
+    - [Load JSON Data with Script Tag](#load-json-data-with-script-tag)
+    - [Load Templates with Script Tag](#load-templates-with-script-tag)
+  - [Script Tag for handlebars4code.js](#script-tag-for-handlebars4codejs)
+  - [Additional Handlebars Helpers for Code generation](#additional-handlebars-helpers-for-code-generation)
+    - [List of Helpers in Handlebars4Code](#list-of-helpers-in-handlebars4code)
+    - [Helper: `filename`](#helper-filename)
+      - [Template 1: `filename`](#template-1-filename)
+      - [JSON Data 1: `filename`](#json-data-1-filename)
+      - [Compiler Output 1: `filename`](#compiler-output-1-filename)
+      - [JSON Data 2: `filename`](#json-data-2-filename)
+      - [Template 2: `filename`](#template-2-filename)
+      - [Compiler Output 2: `filename`](#compiler-output-2-filename)
+    - [Helper: `ifcond`](#helper-ifcond)
+      - [Template: `ifcond`](#template-ifcond)
+      - [JSON Data: `ifcond`](#json-data-ifcond)
+      - [Compiler Output: `ifcond`](#compiler-output-ifcond)
+    - [Helper: `require_class_list`](#helper-require_class_list)
+      - [Template: `require_class_list`](#template-require_class_list)
+      - [JSON Data: `require_class_list`](#json-data-require_class_list)
+      - [Compiler Output: `require_class_list`](#compiler-output-require_class_list)
+    - [Helper: `requirelibs`](#helper-requirelibs)
+      - [Template: `requirelibs`](#template-requirelibs)
+      - [JSON Data: `requirelibs`](#json-data-requirelibs)
+      - [Compiler Output: `requirelibs`](#compiler-output-requirelibs)
+    - [Helper: `foreach`](#helper-foreach)
+      - [Template: `foreach`](#template-foreach)
+      - [Parameter of Helper:  `foreach`](#parameter-of-helper--foreach)
+      - [JSON Data: `foreach`](#json-data-foreach)
+      - [Compiler Output: `foreach`](#compiler-output-foreach)
+    - [Helper: `paramcall`](#helper-paramcall)
+      - [Template: `paramcall`](#template-paramcall)
+      - [JSON Data: `paramcall`](#json-data-paramcall)
+      - [Compiler Output: `paramcall`](#compiler-output-paramcall)
+    - [Helper: `parameterlist`](#helper-parameterlist)
+      - [Template: `parameterlist`](#template-parameterlist)
+      - [JSON Data: `parameterlist`](#json-data-parameterlist)
+      - [Compiler Output: `parameterlist`](#compiler-output-parameterlist)
+    - [Helper: `indent`](#helper-indent)
+      - [Template: `indent`](#template-indent)
+      - [JSON Data: `indent`](#json-data-indent)
+      - [Compiler Output: `indent`](#compiler-output-indent)
+  - [Build Process of `npm run build`](#build-process-of-npm-run-build)
+    - [Browserify and Watchify](#browserify-and-watchify)
+    - [Global Installation of Browserify, Watchify, UglifyJS and DocToc](#global-installation-of-browserify-watchify-uglifyjs-and-doctoc)
+    - [Package Installation of Browserify and Watchify - Alternative](#package-installation-of-browserify-and-watchify---alternative)
+    - [Start Watching the Files with Watchify](#start-watching-the-files-with-watchify)
+    - [Source JS file and development bundle output](#source-js-file-and-development-bundle-output)
+  - [Acknowledgement](#acknowledgement)
+  - [Libraries required for  `XML2Code`](#libraries-required-for--xml2code)
+  - [Libraries for Building and Developement](#libraries-for-building-and-developement)
+  - [NPM Library Information](#npm-library-information)
+
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
@@ -867,10 +936,10 @@ These libraries are not included in `xml2code.js`, but e.g. are required in `bui
 ## NPM Library Information
 * Exported Module Variable: `XML2Code`
 * Package:  `xml2code`
-* Version:  `0.0.1`   (last build 2018/12/25 9:56:04)
+* Version:  `0.0.1`   (last build 2018/12/26 6:26:44)
 * Homepage: `https://github.com/niebert/XML2Code#readme`
 * License:  MIT
-* Date:     2018/12/25 9:56:04
+* Date:     2018/12/26 6:26:44
 * Require Module with:
 ```javascript
     const vXML2Code = require('xml2code');

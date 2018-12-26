@@ -7,16 +7,17 @@
   "directories": {
     "doc": "docs"
   },
+  "is_constructor": false,
   "scripts": {
     "watch": "watchify src/xml2code.js -o dist/xml2code.watch.js -v",
-    "build": "node ./build.js;doctoc ./README.md",
+    "build": "node ./build.js;doctoc README_build.md",
     "test": "jshint src/xml2code.js",
     "compress": "uglifyjs dist/xml2code.js --compress -o dist/xml2code.min.js",
     "browserify": "browserify src/xml2code.js  | uglifyjs -mc warnings=false > docs/js/xml2code.src.min.js"
 },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/niebert/XML2Code.git"
+    "url": "git+https://github.com/niebert/XML2Code.git",
   },
   "keywords": [
     "XML",

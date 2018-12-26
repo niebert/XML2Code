@@ -1,3 +1,4 @@
+
 ## Build and Compress with Browserify, Watchify, UglifyJS
 The NodeJS modules can use `require()`-command. Browsers cannot execute the `require()`-command and other node specific programming features.
 * `Browserify` loads the file `___PKG_MAIN___` as input file and resolves e.g. the `require()`-command and creates an output file in `dist/___PKG_NAME___.brows.js`
